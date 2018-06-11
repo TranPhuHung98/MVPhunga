@@ -69,7 +69,7 @@ public class Database extends SQLiteOpenHelper implements DataBaseInteractor {
     @Override
     public Cursor selectUser() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM "+tableName,null);
+        Cursor res = db.rawQuery("SELECT * FROM "+tableName+" ORDER BY "+co2,null);
         return res;
     }
 
